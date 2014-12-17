@@ -14,14 +14,6 @@ var randomNum = Math.floor(Math.random() * allQuotes.length)
 
 $('.quotation').text(allQuotes[randomNum]);
 
-// var $container = $('#container');
-// // initialize
-
-//   $container.masonry({
-//   	  columnWidth: 290,
-//   	  gutterWidth:0,
-//   	  itemSelector: '.item'
-//   });
-
+//$("img").unveil();
 
 }());

@@ -41,20 +41,76 @@ $icon-font-path: '../bower_components/bootstrap-sass-official/assets/fonts/boots
   100% { top: 130px; }
 }
 
+$mobile-width: 767px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+body{
+	background:#fff;
+}
+
+header{
+	background-color: #ff8f79;
+	padding:100px 0;
+
+	h1{
+		border-bottom: 5px solid #fff;
+		display: inline-block;
+	}
+
+	h1,h2{
+		color:#fff;
+		font-size:48px;
+		text-transform: lowercase;
+		margin:0;
+		padding-bottom: 5px;
+	}
+}
+
+h2{
+	font-family: 'Karla', sans-serif;
+	font-weight:100;
+	text-transform:lowercase;
+	font-size:48px;
+	color:#6D5B5B;
+	padding-bottom:7.5px;
+	margin-left:5px;
+	margin-bottom:25px;
+}
+
 .container{
 	margin:0 auto;
 	width:100%;
+	padding:50px 0;
 	max-width:1240px;
-	background:#fff;
+	font-family: 'Karla', sans-serif;
 }
 
 .item { 
   width:290px;
   height:290px;
-  margin:5px;
+  margin:10px;
   float:left;
-  
-
+ 
   figure{
   	position:relative;
 
@@ -71,23 +127,19 @@ $icon-font-path: '../bower_components/bootstrap-sass-official/assets/fonts/boots
 	    top:130px;
 	    margin-left:auto;
 	    margin-right:auto;
-	    width:300px;
+	    width:250px;
 	    font-size:20px;
 	    color:#000;
 	    opacity:0;
 	    transition:opacity .3s ease;
-
-	    p{
-	    	position: relative;
-  			color: #000;
-	    }
   	}
   }
 
   &:hover{
   	figure img{
-  		opacity:.4;
+  		opacity:.3;
   		transition:opacity .5s ease;
+  		filter: blur(1px);
   	}
   	figcaption{
   		opacity:1;
