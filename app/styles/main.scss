@@ -4,6 +4,43 @@ $icon-font-path: '../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@include keyframes(slideDown) {
+  0%   { top: 110px; }
+  100% { top: 130px; }
+}
+
 .container{
 	margin:0 auto;
 	width:100%;
@@ -38,7 +75,12 @@ $icon-font-path: '../bower_components/bootstrap-sass-official/assets/fonts/boots
 	    font-size:20px;
 	    color:#000;
 	    opacity:0;
-	    transition:opacity .1s ease;
+	    transition:opacity .3s ease;
+
+	    p{
+	    	position: relative;
+  			color: #000;
+	    }
   	}
   }
 
@@ -50,6 +92,7 @@ $icon-font-path: '../bower_components/bootstrap-sass-official/assets/fonts/boots
   	figcaption{
   		opacity:1;
   		transition:opacity .5s ease;
+  		@include animation('slideDown .2s 1');
   	}
   }
 
