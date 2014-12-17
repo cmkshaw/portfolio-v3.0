@@ -41,6 +41,11 @@ $icon-font-path: '../bower_components/bootstrap-sass-official/assets/fonts/boots
   100% { top: 130px; }
 }
 
+@include keyframes(slideDownLong) {
+  0%   { top: 100px; }
+  100% { top: 120px; }
+}
+
 $mobile-width: 767px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
@@ -72,17 +77,18 @@ header{
 	background-color: #ff8f79;
 	padding:100px 0;
 
-	h1{
-		border-bottom: 5px solid #fff;
-		display: inline-block;
-	}
-
 	h1,h2{
 		color:#fff;
-		font-size:48px;
+		font-size:44px;
 		text-transform: lowercase;
 		margin:0;
 		padding-bottom: 5px;
+	}
+
+	h1{
+		border-bottom: 5px solid #fff;
+		display: inline-block;
+		margin-bottom:5px;
 	}
 }
 
@@ -90,7 +96,7 @@ h2{
 	font-family: 'Karla', sans-serif;
 	font-weight:100;
 	text-transform:lowercase;
-	font-size:48px;
+	font-size:44px;
 	color:#6D5B5B;
 	padding-bottom:7.5px;
 	margin-left:5px;
@@ -100,14 +106,14 @@ h2{
 .container{
 	margin:0 auto;
 	width:100%;
-	padding:50px 0;
-	max-width:1240px;
+	padding:50px 20px 20px 20px;
+	max-width:1360px;
 	font-family: 'Karla', sans-serif;
 }
 
 .item { 
-  width:290px;
-  height:290px;
+  width:280px;
+  height:280px;
   margin:10px;
   float:left;
  
@@ -128,11 +134,16 @@ h2{
 	    margin-left:auto;
 	    margin-right:auto;
 	    width:250px;
-	    font-size:20px;
+	    font-size:24px;
 	    color:#000;
 	    opacity:0;
 	    transition:opacity .3s ease;
   	}
+	
+	figcaption.longText{
+		top:120px;
+	}	
+
   }
 
   &:hover{
@@ -145,6 +156,9 @@ h2{
   		opacity:1;
   		transition:opacity .5s ease;
   		@include animation('slideDown .2s 1');
+  	}
+  	figcaption.longText{
+  		@include animation('slideDownLong .2s 1');
   	}
   }
 

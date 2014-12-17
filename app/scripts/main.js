@@ -14,6 +14,6 @@ var randomNum = Math.floor(Math.random() * allQuotes.length)
 
 $('.quotation').text(allQuotes[randomNum]);
 
-//$("img").unveil();
+$("img").unveil(200);
 
 }());
