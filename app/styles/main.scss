@@ -69,12 +69,14 @@ $desktop-width: 1024px;
   }
 }
 
+$pink: #ff8f79;
+
 body{
 	background:#fff;
 }
 
 header{
-	background-color: #ff8f79;
+	background-color: $pink;
 	padding:100px 0;
 
 	h1,h2{
@@ -111,56 +113,82 @@ h2{
 	font-family: 'Karla', sans-serif;
 }
 
-.item { 
-  width:280px;
-  height:280px;
-  margin:10px;
-  float:left;
- 
-  figure{
-  	position:relative;
+//Homepage Project Section
 
-  	img{
-  		max-width:100%;
-  		transition:opacity .5s ease;
-  }
-	
-  figcaption{
-	  	text-align: center;
-		position:absolute;
-		left:0;
-	    right:0;
-	    top:130px;
-	    margin-left:auto;
-	    margin-right:auto;
-	    width:250px;
-	    font-size:24px;
-	    color:#000;
-	    opacity:0;
-	    transition:opacity .3s ease;
-  	}
-	
-	figcaption.longText{
-		top:120px;
-	}	
+.projects{
+	.item { 
+	  width:280px;
+	  height:280px;
+	  margin:10px;
+	  float:left;
+	 
+	  figure{
+	  	position:relative;
 
-  }
+	  img{
+	  		max-width:100%;
+	  		transition:opacity .5s ease;
+	  }
+		
+	  figcaption{
+		  	text-align: center;
+			position:absolute;
+			text-transform: uppercase;
+			left:0;
+		    right:0;
+		    top:130px;
+		    margin-left:auto;
+		    margin-right:auto;
+		    width:250px;
+		    font-size:24px;
+		    color:#000;
+		    opacity:0;
+		    transition:opacity .3s ease;
+	  	}
+		
+		figcaption.longText{
+			top:120px;
+		}	
 
-  &:hover{
-  	figure img{
-  		opacity:.3;
-  		transition:opacity .5s ease;
-  		filter: blur(1px);
-  	}
-  	figcaption{
-  		opacity:1;
-  		transition:opacity .5s ease;
-  		@include animation('slideDown .2s 1');
-  	}
-  	figcaption.longText{
-  		@include animation('slideDownLong .2s 1');
-  	}
-  }
+	  }
 
- 
+	  &:hover{
+	  	figure img{
+	  		opacity:.3;
+	  		transition:opacity .5s ease;
+	  		filter: blur(1px);
+	  	}
+	  	figcaption{
+	  		opacity:1;
+	  		transition:opacity .5s ease;
+	  		@include animation('slideDown .2s 1');
+	  	}
+	  	figcaption.longText{
+	  		@include animation('slideDownLong .2s 1');
+	  	}
+	  }
+	}
+}
+
+//Homepage About Section
+
+.about{
+	padding-bottom:50px;
+
+	p{
+		margin-left:10px;
+		font-size:22px;
+		max-width:700px;
+	}
+
+	a{
+		color:$pink;
+		text-decoration:none;
+		border-bottom:2px solid $pink;
+	}
+}
+
+footer{
+	height:300px;
+	background:rgba(52, 35, 35, 0.7);
 }
