@@ -75,7 +75,7 @@ body{
 	background:#fff;
 }
 
-header{
+.intro {
 	background-color: $pink;
 	padding:100px 0;
 
@@ -178,7 +178,7 @@ h2{
 	p{
 		margin-left:10px;
 		font-size:22px;
-		max-width:700px;
+		max-width:750px;
 	}
 
 	a{
@@ -189,12 +189,24 @@ h2{
 }
 
 footer{
-	height:300px;
+	padding:0 0 20px 0;
 	background:rgba(52, 35, 35, 0.7);
+	font-size:22px;
 
 	.socialImg{
 		height: 50px;
 		width:50px;
 		margin-right: 20px;
+	}
+
+	p{
+		color:#fff;
+	}
+
+	a.pinkLink{
+		color:$pink;
+		font-size:22px;
+		text-decoration:none;
+		border-bottom:2px solid $pink;
 	}
 }
