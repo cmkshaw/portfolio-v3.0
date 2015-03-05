@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Caroline Shaw - Web Developer, UX Designer</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Karla:400,700' rel='stylesheet' type='text/css'>
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -16,7 +14,7 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -27,29 +25,92 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <header>
+
+    <!-- Use skrollr here
+    Affix h1 ? + Show subtitle next to it (hidden element)
+    -->
+    <section class="intro">
        <div class="container">
 
-       <h1>Caroline Shaw</h1>
-       <h2>Web Developer, UX Designer</h2>
-       <h2>Toronto</h2>
-    
+         <a href="/">
+            <h1>Caroline Shaw</h1>
+         </a>
+
+         <h2>Web Developer, UX Designer</h2>
+         
+         <h2>Toronto</h2>
+       
        </div>
-    </header>
+    </section>
 
 <section class="projects">
     <div class="container">
       
-      <h2>realsocial</h2>
+      <h2>CV</h2>
+
+      <h3>Experience</h3>
+
+    <!--  What to do with this space? Highlightable jobs -->
+
+      <h4>Front end Web Developer / UX Designer</h4>
+      <p>Art &amp; Science Digital Experience Design</p>
+
+    <!--  On click it asks you if you want to see more? -->
+
+      <h4>Web Developer</h4>
+      <p>Self-employed</p>
+
+      <h4>Intern Web Developer</h4>
+      <p>Humber</p>
+
+      <h4>Project Manager</h4>
+      <p>FriesenPress Publishing</p>
+
+      <a href="#">More</a>
+
+      <h3>Education</h3>
+
+   <!--   Perhaps a venn diagram? OMG. Raphael?  -->
+
+      <h4>Web Development</h4>
+      <p>Humber</p>  
+
+      <h4>Wearable Media</h4>
+      <p>Continuing Education Course</p>
+
+      <h4>Studio Art, Art History</h4>
+      <p>University of Guelph</p>
+
 
     </div>
+    
 </section>
-    <section class="footer">
-      <div class="container">
-     
 
-      </div>
-    </section>
+<section class="about">
+   
+    <div class="container">
+    
+    <h2>About</h2>
+    
+    <p>Friendly front-end developer, specializing in modern responsive websites. Much love for JavaScript &amp; jQuery. Affinity for SVGs, CSS3 animations and snacking. Currently working at <a href="http://www.artscience.ca">Art &amp; Science</a> in Toronto.</p> 
+
+    </div>
+
+</section>
+
+<footer>
+  <div class="container">
+
+  <p>Contact me: <a class="pinkLink" href="maito:info@caroshaw.com">info@caroshaw.com</a></p>
+
+  <a target="_blank" href="https://github.com/cmkshaw"><img class="socialImg" src="/images/github.svg" alt=""></a> 
+   <a target="_blank" href="https://www.linkedin.com/in/cmkshaw">  <img class="socialImg" src="/images/linkedin.svg" alt=""></a>
+   <a target="_blank" href="http://www.rdio.com/people/cmkshaw/">  <img class="socialImg" src="/images/rdio.svg" alt=""></a> 
+   <a target="_blank" href="https://twitter.com/cmkshaw">  <img class="socialImg" src="/images/twitter.svg" alt=""></a> 
+   <a target="_blank" href="http://carpoline.tumblr.com/">  <img class="socialImg" src="/images/tumblr.svg" alt=""></a> 
+   </div>
+
+</footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -84,7 +145,6 @@
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
-         <script src="scripts/skrollr.js"></script>
         <script src="scripts/unveil.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
